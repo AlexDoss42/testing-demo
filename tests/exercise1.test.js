@@ -19,6 +19,9 @@ describe('fizzBuzz', () => {
   });
 //Test for number
   it('should return the number if it is not divisible by 3 or 5', () => {
-
+    const nums = [1, 2, 4, 7, 8];
+    nums.forEach(n => {
+      expect(exercise.fizzBuzz(n).toBe(n));
+    });
   });
 });

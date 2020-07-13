@@ -3,7 +3,7 @@ const exercise = require('../exercise1');
 describe('fizzBuzz', () => {
 //Test for throwing Error
   it('should throw an exception if the type of the input is not a number', () => {
-    const notNums = ['a', null, undefined, NaN, false, true, 1.1]
+    const notNums = ['a', null, undefined, NaN, false, true, 1.1, {}]
     notNums.forEach(nN => {
       expect(() => { exercise.fizzBuzz(nN) }).toThrow();
     });

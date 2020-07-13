@@ -15,7 +15,10 @@ describe('fizzBuzz', () => {
   });
 //Test for Buzz
   it('should return Buzz if the number is divisible by 5', () => {
-
+    const fives = [5, 10, 20, 25, 35];
+    fives.forEach(f => {
+      expect(exercise.fizzBuzz(f).toBe('Buzz'));
+    });
   });
 //Test for number
   it('should return the number if it is not divisible by 3 or 5', () => {

@@ -40,3 +40,9 @@ describe('getProduct', () => {
     expect(result).toHaveProperty('id', '1');
   });
 });
+
+describe('registerUser', () => {
+  it('should throw if username is falsy', () => {
+    expect(() => { lib.registerUser(null) }).toThrow();
+  });
+});

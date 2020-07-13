@@ -46,7 +46,12 @@ describe('registerUser', () => {
     const args = [null, undefined, NaN, '', 0, false];
     args.forEach(a => {
       expect(() => { lib.registerUser(a) }).toThrow();
-    })
-    
+    });
+  });
+
+  it('should return a user object if valud username is passed', () => {
+    const result = lib.registerUser('Alex');
+    expect(result).toMatch({ username: 'Alex' });
+    expect(result.id).toBeGreaterThan(0);
   });
 });

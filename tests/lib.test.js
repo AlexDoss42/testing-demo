@@ -71,6 +71,13 @@ describe('applyDiscount', () => {
 });
 
 describe('notifyCustomer', () => {
+
+  const mockFunction = jest.fn();
+
+  mockFunction.mockResolvedValue(1);
+  const result = await mockFunction();
+  
+
   db.getCustomerSync = function(customerId) {
     return { email: 'a' }
   }
